@@ -69,6 +69,7 @@ This package will be hosted in the [libton-project/eslint-config-react-app](http
 ### Development Tasks
 
 - [ ] Develop a comprehensive package.json configuration
+- [ ] [Develop and execute test plan](./plan-test.md)
 - [ ] Create a bash script to generate dependency re-exports
 - [ ] Write a detailed README.md with usage instructions
 - [ ] Implement the `eslint-config-react-app/vite` configuration based on Vite's template
