@@ -11,19 +11,9 @@ import vite from 'eslint-config-libton/vite';
 Additionally, the package will re-export its dependencies, enabling users to access them directly:
 
 ```js
-import js from 'eslint-config-libton/@eslint/js';
-import globals from 'eslint-config-libton/globals';
+import js from 'eslint-config-libton/-/@eslint/js';
+import globals from 'eslint-config-libton/-/globals';
 ```
-
-<!--
-TODO: Evaluate the re-export path structure. Consider adding a prefix like `-` to the package name:
-```js
-import js from 'eslint-config-libton/-/@eslint/js'
-import globals from 'eslint-config-libton/-/globals'
-```
-
-@ai: Please provide suggestions for the re-export path structure.
--->
 
 ## Vite Configuration
 
@@ -78,7 +68,7 @@ This package will be hosted in the [libton-project/eslint-config-react-app](http
 
 ### Development Tasks
 
-- [ ] Create a bash script to generate dependency re-exports
 - [ ] Develop a comprehensive package.json configuration
+- [ ] Create a bash script to generate dependency re-exports
 - [ ] Write a detailed README.md with usage instructions
 - [ ] Implement the `eslint-config-react-app/vite` configuration based on Vite's template
