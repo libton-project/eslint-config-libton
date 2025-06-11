@@ -1,0 +1,50 @@
+{
+  "name": "eslint-config-libton",
+  "version": "0.1.0",
+  "description": "ESLint configuration for Libton projects, based on Vite React TypeScript template",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./vite": "./vite.js",
+    "./-/@eslint/js": "./node_modules/@eslint/js",
+    "./-/globals": "./node_modules/globals",
+    "./-/eslint-plugin-react-hooks": "./node_modules/eslint-plugin-react-hooks",
+    "./-/eslint-plugin-react-refresh": "./node_modules/eslint-plugin-react-refresh",
+    "./-/typescript-eslint": "./node_modules/typescript-eslint"
+  },
+  "files": [
+    "index.js",
+    "vite.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "vite",
+    "react",
+    "typescript"
+  ],
+  "author": "Libton Project",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "globals": "^14.0.0",
+    "typescript-eslint": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libton-project/eslint-config-libton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/libton-project/eslint-config-libton/issues"
+  },
+  "homepage": "https://github.com/libton-project/eslint-config-libton#readme"
+} 
