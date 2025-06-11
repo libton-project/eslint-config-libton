@@ -1,14 +1,14 @@
-# `eslint-config-libton` plan
+# `eslint-config-libton` Plan
 
-This is a package to group eslint config dependencies. we gone start with the eslint config from vite react-ts template. then we will relax some of the rules. and my be adding some more rules to it.
+This package aims to provide a unified ESLint configuration solution by bundling ESLint config dependencies. We'll start with the ESLint configuration from the Vite React TypeScript template, then customize it by relaxing certain rules and potentially adding new ones.
 
-our package will provide a default config based on the vite react-ts template eslint config. so that users can use it like this:
+The package will provide a default configuration based on the Vite React TypeScript template's ESLint config, allowing users to easily integrate it like this:
 
 ```js
 import vite from 'eslint-config-libton/vite';
 ```
 
-our package will also provide re-export for its dependencies, so that users can use it like this:
+Additionally, the package will re-export its dependencies, enabling users to access them directly:
 
 ```js
 import js from 'eslint-config-libton/@eslint/js';
@@ -16,20 +16,20 @@ import globals from 'eslint-config-libton/globals';
 ```
 
 <!--
-todo: is this a good path for re-exports? should we add prefix like `-` to the package name?
+TODO: Evaluate the re-export path structure. Consider adding a prefix like `-` to the package name:
 ```js
 import js from 'eslint-config-libton/-/@eslint/js'
 import globals from 'eslint-config-libton/-/globals'
 ```
 
-@ai: give me suggestions for the re-export path.
+@ai: Please provide suggestions for the re-export path structure.
 -->
 
-## vite config
+## Vite Configuration
 
-this is vite react-ts template eslint config (eslint.config.js):
+Below is the ESLint configuration from the Vite React TypeScript template (eslint.config.js):
 
-<!-- @ai: do not change this code. it is copied form vite repo -->
+<!-- @ai: This code is copied from the Vite repository and should not be modified -->
 
 ```js
 import js from '@eslint/js';
@@ -62,21 +62,23 @@ export default tseslint.config(
 );
 ```
 
-## react app config
+## React App Configuration
 
-I like the way `eslint-config-react-app` works. it was a good, but relaxed config. but it is not compatible with eslint 9. our config should be compatible with eslint 9.
+We appreciate the approach taken by `eslint-config-react-app`, which provides a well-balanced and relaxed configuration. However, since it's not compatible with ESLint 9, our configuration will be designed to work with the latest ESLint version while maintaining similar principles.
 
-source of `eslint-config-react-app` is here: https://github.com/facebook/create-react-app/blob/main/packages/eslint-config-react-app
+Reference: [eslint-config-react-app source](https://github.com/facebook/create-react-app/blob/main/packages/eslint-config-react-app)
 
-## eslint-config-libton package
+## Package Structure
 
-this package will provide a default config based on the vite react-ts template eslint config. it will also provide re-exports for its dependencies.
+This package will be hosted in the [libton-project/eslint-config-react-app](https://github.com/libton-project/eslint-config-react-app) repository and will provide:
 
-this package will be hosted in this repository: https://github.com/libton-project/eslint-config-react-app
+1. A default configuration based on the Vite React TypeScript template
+2. Re-exports for all dependencies
+3. A modern, maintainable structure compatible with ESLint 9
 
-### tasks to be done by ai
+### Development Tasks
 
-- [ ] a bash script that generate re-exports for its dependencies.
-- [ ] a good package.json for this package.
-- [ ] a good README.md for this package.
-- [ ] `eslint-config-react-app/vite` based on vite
+- [ ] Create a bash script to generate dependency re-exports
+- [ ] Develop a comprehensive package.json configuration
+- [ ] Write a detailed README.md with usage instructions
+- [ ] Implement the `eslint-config-react-app/vite` configuration based on Vite's template
