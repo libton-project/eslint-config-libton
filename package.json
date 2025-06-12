@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-libton",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ESLint configuration for Libton projects, based on Vite React TypeScript template",
   "type": "module",
   "main": "index.js",
