@@ -26,6 +26,7 @@
   "keywords": [
     "eslint",
     "eslintconfig",
+    "eslint-config",
     "vite",
     "react",
     "typescript"
