@@ -7,15 +7,16 @@
   "exports": {
     ".": "./index.js",
     "./vite": "./vite.js",
-    "./-/@eslint/js": "./node_modules/@eslint/js",
-    "./-/globals": "./node_modules/globals",
-    "./-/eslint-plugin-react-hooks": "./node_modules/eslint-plugin-react-hooks",
-    "./-/eslint-plugin-react-refresh": "./node_modules/eslint-plugin-react-refresh",
-    "./-/typescript-eslint": "./node_modules/typescript-eslint"
+    "./-/@eslint/js": "./-/@eslint/js/index.js",
+    "./-/globals": "./-/globals/index.js",
+    "./-/eslint-plugin-react-hooks": "./-/eslint-plugin-react-hooks/index.js",
+    "./-/eslint-plugin-react-refresh": "./-/eslint-plugin-react-refresh/index.js",
+    "./-/typescript-eslint": "./-/typescript-eslint/index.js"
   },
   "files": [
     "index.js",
-    "vite.js"
+    "vite.js",
+    "-"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

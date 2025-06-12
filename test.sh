@@ -43,6 +43,9 @@ EOF
 # Create eslint config
 cat > eslint.config.js << 'EOF'
 import vite from 'eslint-config-libton/vite';
+import globals from 'eslint-config-libton/-/globals';
+
+console.log('globals keys:', Object.keys(globals));
 
 export default vite;
 EOF
