@@ -31,6 +31,7 @@ trap cleanup_all EXIT
 cd "$TEST_DIR"
 echo "Initializing test project..."
 pnpm init
+pnpm pkg set type="module";
 
 # Create test file structure
 mkdir -p src
@@ -42,10 +43,15 @@ EOF
 
 # Create eslint config
 cat > eslint.config.js << 'EOF'
-import vite from 'eslint-config-libton/vite';
+import { vite, config } from 'eslint-config-libton';
+import vite2 from 'eslint-config-libton/vite';
 import globals from 'eslint-config-libton/-/globals';
 
-console.log('globals keys:', Object.keys(globals));
+console.assert(globals.browser, '⚠️ globals.browser should be defined');
+console.assert(config, '⚠️ config should be defined');
+console.assert(vite, '⚠️ vite should be defined');
+console.assert(vite2, '⚠️ vite2 should be defined');
+console.assert(vite2 === vite, '⚠️ vite2 should be the same as vite');
 
 export default vite;
 EOF
