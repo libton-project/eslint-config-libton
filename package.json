@@ -19,7 +19,9 @@
     "-"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gen": "./generate-reexports.sh",
+    "format": "pnpx prettier --write '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}' --single-quote",
+    "test": "./test.sh"
   },
   "keywords": [
     "eslint",
