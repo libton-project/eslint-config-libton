@@ -30,6 +30,22 @@ export default vite;
 
 This applies the same ESLint configuration used in the Vite React TypeScript template, including support for React, TypeScript, and modern browser globals.
 
+### Customization
+
+You can customize the configuration using the `config` helper, which is re-exported from `typescript-eslint`:
+
+```js
+import { config } from 'eslint-config-libton'; // re-exported from 'typescript-eslint'
+import vite from 'eslint-config-libton/vite';
+
+export default config(vite, {
+  name: 'relaxed',
+  rules: {
+    'prefer-const': 'off',
+  },
+});
+```
+
 ## Re-exports
 
 This package re-exports its dependencies for convenience. You can import them directly if you need to extend or customize your config:
