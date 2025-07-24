@@ -7,7 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- next-header -->
 
-## [Unreleased] - ReleaseDate
+## [Unreleased] - 2025-07-24
+
+### Changed
+
+- Updated `vite.js` to use Vite 7.0.3 ESLint config style, including new `globalIgnores` and config structure.
+- Updated dependencies:
+  - `@eslint/js` to `^9.30.1`
+  - `eslint-plugin-react-refresh` to `^0.4.20`
+  - `globals` to `^16.3.0`
+  - `typescript-eslint` to `^8.35.1`
 
 ## [0.1.3] - 2025-06-12
 
