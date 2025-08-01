@@ -44,3 +44,5 @@ export default tseslint.config(
 We appreciate the approach taken by `eslint-config-react-app`, which provides a well-balanced and relaxed configuration. However, since it's not compatible with ESLint 9, our configuration will be designed to work with the latest ESLint version while maintaining similar principles.
 
 Reference: [eslint-config-react-app source](https://github.com/facebook/create-react-app/blob/main/packages/eslint-config-react-app)
+
+expanded config is [here](./prior-arg/eslint-config-react-app.json)
