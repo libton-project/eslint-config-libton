@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- update dependencies
 - use `defineConfig` from `eslint/config` instead of `config` from `typescript-eslint` for be more like vite's template.
 - re-export `defineConfig` from `eslint/config`
 
