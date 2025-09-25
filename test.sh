@@ -41,6 +41,12 @@ const test = 'test';
 export default test;
 EOF
 
+cat > src/test-let.ts << 'EOF'
+// Test file for eslint-config-libton
+let test = 'test';
+export default test;
+EOF
+
 # Create eslint config
 cat > eslint.config.js << 'EOF'
 import { vite, defineConfig, config } from 'eslint-config-libton';
@@ -77,6 +83,32 @@ if pnpm eslint src/test.ts; then
     echo -e "${GREEN}ESLint test passed!${NC}"
 else
     echo -e "${RED}ESLint test failed!${NC}"
+    exit 1
+fi
+
+if pnpm eslint src/test-let.ts; then
+    echo -e "${RED}ESLint test should have failed but passed!${NC}"
+    exit 1
+else
+    echo -e "${GREEN}ESLint correctly failed on let declaration!${NC}"
+fi
+
+cat > eslint.config.js << 'EOF'
+import { defineConfig } from 'eslint-config-libton';
+import vite from 'eslint-config-libton/vite';
+
+export default defineConfig(vite, {
+  name: 'relaxed',
+  rules: {
+    'prefer-const': 'off',
+  },
+});
+EOF
+
+if pnpm eslint src/test-let.ts; then
+    echo -e "${GREEN}ESLint test passed after relaxing rules!${NC}"
+else
+    echo -e "${RED}ESLint test failed after relaxing rules!${NC}"
     exit 1
 fi
 
