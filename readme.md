@@ -32,13 +32,13 @@ This applies the same ESLint configuration used in the Vite React TypeScript tem
 
 ### Customization
 
-You can customize the configuration using the `config` helper, which is re-exported from `typescript-eslint`:
+You can customize the configuration using the `defineConfig` helper, which is re-exported from `eslint/config`:
 
 ```js
-import { config } from 'eslint-config-libton'; // re-exported from 'typescript-eslint'
+import { defineConfig } from 'eslint-config-libton'; // re-exported from 'eslint/config'
 import vite from 'eslint-config-libton/vite';
 
-export default config(vite, {
+export default defineConfig(vite, {
   name: 'relaxed',
   rules: {
     'prefer-const': 'off',

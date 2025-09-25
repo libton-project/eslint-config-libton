@@ -43,11 +43,12 @@ EOF
 
 # Create eslint config
 cat > eslint.config.js << 'EOF'
-import { vite, config } from 'eslint-config-libton';
+import { vite, defineConfig, config } from 'eslint-config-libton';
 import vite2 from 'eslint-config-libton/vite';
 import globals from 'eslint-config-libton/-/globals';
 
 console.assert(globals.browser, '⚠️ globals.browser should be defined');
+console.assert(defineConfig, '⚠️ defineConfig should be defined');
 console.assert(config, '⚠️ config should be defined');
 console.assert(vite, '⚠️ vite should be defined');
 console.assert(vite2, '⚠️ vite2 should be defined');
